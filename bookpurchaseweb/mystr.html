@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Store</title>
+
+    <style>
+        /* Force body to take full height and layout top-to-bottom */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        header button {
+            background-color: #555;
+            color: #fff;
+            border: none;
+            padding: 8px 16px;
+            margin: 0 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        header button:hover {
+            background-color: #777;
+        }
+
+        /* This only holds the main content and the sidebar side-by-side */
+        .main-container { 
+            display: flex; 
+            flex: 1; 
+        }
+
+        aside { 
+            width: 200px; 
+            background: #f4f4f4; 
+            padding: 15px; 
+        }
+
+        main { 
+            flex: 1; 
+            padding: 15px; 
+        }
+        
+        table { 
+            width: 100%; 
+            border-collapse: collapse; 
+        }
+        
+        th, td { 
+            border: 1px solid #ddd; 
+            padding: 8px; 
+            text-align: center; 
+        }
+        
+        th { 
+            background: #f2f2f2; 
+        }
+        
+        img { 
+            width: 50px; 
+            height: 70px; 
+            object-fit: cover; 
+            background-color: #eee; /* placeholder background until you add real image paths */
+        }
+        
+        /* Footer sits comfortably at the bottom outside the flex container */
+        footer { 
+            background: #333; 
+            color: #fff; 
+            padding: 10px; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+        }
+        
+        footer button { 
+            background: #007BFF; 
+            color: #fff; 
+            border: none; 
+            padding: 6px 12px; 
+            cursor: pointer; 
+            border-radius: 4px;
+        }
+        footer button:hover {
+            background-color: #0056b3;
+        }
+
+    
+
+    </style>
+</head>
+<body>
+
+    <header>
+      <button onclick="location.href='index.html'">home</button>
+      <button onclick="location.href='subject.html'">subject</button>
+      <button onclick="location.href='payment.html'">payment</button>
+      <button onclick="location.href='login.html'">login</button>
+    </header>    
+
+    <!-- Main Container ONLY houses main and aside -->
+    <div class="main-container">
+        <main>
+            <h2>Available Books</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>S.no</th>
+                        <th>subject</th>
+                        <th>price</th>
+                        <th>book</th>
+                        <th>add to cart</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Maths</td>
+                        <td>200</td>
+                        <td><img src="" alt="Maths"></td>
+                        <td><button onclick="addToCart('Maths')">Add to cart</button></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Science</td>
+                        <td>250</td>
+                        <td><img src="" alt="Science"></td>
+                        <td><button onclick="addToCart('Science')">Add to cart</button></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>English</td>
+                        <td>150</td>
+                        <td><img src="" alt="English"></td>
+                        <td><button onclick="addToCart('English')">Add to cart</button></td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Social</td>
+                        <td>300</td>
+                        <td><img src="" alt="Social"></td>
+                        <td><button onclick="addToCart('Social')">Add to cart</button></td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Hindi</td>
+                        <td>100</td>
+                        <td><img src="" alt="Hindi"></td>
+                        <td><button onclick="addToCart('Hindi')">Add to cart</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </main>
+
+        <aside>
+            <h3>Notice</h3>
+            <p>Welcome to our online book store! Check out our new arrivals and discounts this week.</p>
+        </aside>
+    </div> <!-- The main container correctly ends right here! -->
+
+    <!-- Footer is completely independent down here -->
+    <footer>
+        <div>
+            <span>Company Logo</span> | <span>BookStore Inc.</span>
+        </div>
+        <button onclick="window.open('https://maps.google.com', '_blank')">Company Location</button>
+    </footer>
+
+    <!-- Script loaded at the very end of the body -->
+    <script src="script.js"></script>
+
+</body>
+</html>
