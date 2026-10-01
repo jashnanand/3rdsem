@@ -1,0 +1,38 @@
+<%- include('partials/header', { pageTitle: 'About', currentPage: 'about' }) %>
+
+<section class="container single-page">
+  <div class="content-box">
+    <span class="badge">Overview</span>
+    <h1>About this project</h1>
+    <p>
+      This assessment project was redesigned into a modern Express application to showcase
+      JavaScript event handling in a browser-friendly structure.
+    </p>
+    <p>
+      The original logic revolved around EventEmitter, bubbling events, and event-loop behavior.
+      Now the same ideas are presented through structured web pages using routes and EJS templates.
+    </p>
+
+    <div class="info-list">
+      <div>
+        <h3>Goals</h3>
+        <ul>
+          <li>Make the project readable in the browser</li>
+          <li>Display each assessment question as a route</li>
+          <li>Apply modern styling and layout</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Technologies</h3>
+        <ul>
+          <li>Node.js</li>
+          <li>Express.js</li>
+          <li>EJS</li>
+          <li>CSS</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<%- include('partials/footer') %>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= pageTitle %></title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <nav class="nav container">
+        <div class="brand">3rd Sem Assessment</div>
+        <div class="nav-links">
+          <a class="<%= currentPage === 'home' ? 'active' : '' %>" href="/">Home</a>
+          <a class="<%= currentPage === 'about' ? 'active' : '' %>" href="/about">About</a>
+          <a class="<%= currentPage === 'questions' ? 'active' : '' %>" href="/questions">Questions</a>
+          <a class="<%= currentPage === 'contact' ? 'active' : '' %>" href="/contact">Contact</a>
+        </div>
+      </nav>
+    </header>
+    <main class="page-shell">

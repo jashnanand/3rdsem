@@ -1,0 +1,23 @@
+{
+  "name": "assesment1",
+  "version": "1.0.0",
+  "description": "Assessment app with EJS routes and styling",
+  "main": "assesment1.js",
+  "scripts": {
+    "start": "node assesment1.js",
+    "dev": "node assesment1.js"
+  },
+  "keywords": [
+    "assessment",
+    "express",
+    "ejs",
+    "routes"
+  ],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.21.2"
+  }
+}

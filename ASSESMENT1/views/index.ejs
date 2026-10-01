@@ -1,0 +1,41 @@
+<%- include('partials/header', { pageTitle: 'Home', currentPage: 'home' }) %>
+
+<section class="hero container">
+  <div class="hero-copy">
+    <span class="badge">Advanced Web App</span>
+    <h1>Interactive assessment experience with routes and elegant design.</h1>
+    <p>
+      This project combines event-driven JavaScript logic with a clean browser interface,
+      making the assessment easier to understand and present in a live web environment.
+    </p>
+    <div class="hero-actions">
+      <a class="btn primary" href="/questions">View Questions</a>
+      <a class="btn secondary" href="/about">Learn More</a>
+    </div>
+  </div>
+
+  <div class="hero-panel">
+    <div class="panel-card">
+      <h3>Project Highlights</h3>
+      <ul>
+        <li>Express server</li>
+        <li>EJS dynamic templates</li>
+        <li>Route-based pages</li>
+        <li>Responsive CSS</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="container section-grid">
+  <% questions.forEach(function(question) { %>
+    <article class="card">
+      <span class="tag"><%= question.id %></span>
+      <h3><%= question.title %></h3>
+      <p><%= question.description %></p>
+      <a href="/questions/<%= question.id %>">Open details</a>
+    </article>
+  <% }) %>
+</section>
+
+<%- include('partials/footer') %>

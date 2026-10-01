@@ -1,0 +1,22 @@
+<%- include('partials/header', { pageTitle: 'Questions', currentPage: 'questions' }) %>
+
+<section class="container single-page">
+  <div class="content-box">
+    <span class="badge">Topics</span>
+    <h1>Assessment questions</h1>
+    <div class="question-list">
+      <% questions.forEach(function(question) { %>
+        <article class="list-item">
+          <div>
+            <span class="tag"><%= question.id %></span>
+            <h3><%= question.title %></h3>
+          </div>
+          <p><%= question.description %></p>
+          <a href="/questions/<%= question.id %>" class="link-btn">Open topic</a>
+        </article>
+      <% }) %>
+    </div>
+  </div>
+</section>
+
+<%- include('partials/footer') %>
